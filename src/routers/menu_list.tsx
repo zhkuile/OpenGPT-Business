@@ -63,12 +63,7 @@ const web = [
     icon: <UsergroupAddOutlined />,
     message: '账户余额和充值套餐记录'
   },
-  {
-    path: 'https://github.com/79E/ChatGpt-Web',
-    name: '项目地址',
-    icon: <GithubOutlined />,
-    message: '免费开源可商业化AiWeb项目'
-  }
+
 ]
 
 const admin = {
@@ -205,12 +200,8 @@ const admin = {
       path: '/admin/config',
       name: '系统配置',
       icon: <SettingFilled />
-    },
-    {
-      path: 'https://github.com/79E/ChatGpt-Web',
-      name: 'Github',
-      icon: <GithubFilled />
     }
+
   ]
 }
 

@@ -124,7 +124,7 @@ function AdminPage() {
         breadcrumbRender={() => []}
         footerRender={() => (
           <DefaultFooter
-            links={[{ key: 'github', title: 'github', href: 'https://github.com/79E/ChatGpt-Web' }]}
+            links={[{ key: 'github', title: 'github', href: 'https://github.com/zhkuile/OpenGPT-Business' }]}
             copyright="ChatGpt"
           />
         )}
