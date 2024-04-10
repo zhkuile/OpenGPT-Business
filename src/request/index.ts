@@ -58,6 +58,9 @@ const isPlainObject = (obj: any) => {
 // 请求拦截器
 const interceptorsRequest = (config: { url: string; options?: RequestInit }) => {
   console.log('请求拦截器', config)
+//   url = url.replace("/undefined", "");
+   config.url = config.url.replace(/\/undefined/g, "");
+   console.log("url",config)
   const options = {
     ...config.options,
     headers: {
@@ -72,7 +75,6 @@ const interceptorsRequest = (config: { url: string; options?: RequestInit }) => 
 const interceptorsResponse = async <T>(options: any, response: any): Promise<ResponseData<T>> => {
   console.log('响应拦截器：', options, response)
   let data: ResponseData<T> = await response.json()
-
   if (!isResponseData(data)) {
     data = {
       code: response.status === 200 ? 0 : response.status,
